@@ -1,0 +1,27 @@
+<p>Detalle de la tarea</p>
+<div *ngIf="tareas.currentTarea">
+  <div class="form-control">
+    <label class="form-label">Titulo</label>
+    <input
+      name="titulo"
+      type="text"
+      class="form-control"
+      [(ngModel)]="tareas.currentTarea.titulo"
+    />
+
+    <label class="form-label">Descripcion</label>
+    <input
+      name="descripcion"
+      type="text"
+      class="form-control"
+      [(ngModel)]="tareas.currentTarea.descripcion"
+    />
+  </div>
+</div>
+
+<button class="btn btn-primary mx-2" (click)="GuardarCambios()">Guardar</button>
+<a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+  <button class="btn btn-primary">Volver</button>
+</a>
+<!-- 
+{{ tareas.currentTarea | json }} -->

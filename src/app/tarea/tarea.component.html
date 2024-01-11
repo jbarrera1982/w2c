@@ -1,0 +1,24 @@
+<div class="mb-4">
+  <h2>Tareas ({{ tareas.tareas.length }})</h2>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <div *ngFor="let tarea of tareas.tareas">
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">{{ tarea.titulo }}</h5>
+          <p class="card-text">{{ tarea.descripcion }}</p>
+          <a
+            (click)="setearTarea(tarea)"
+            routerLink="/tarea/{{ tarea.id }}"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            <button class="btn btn-primary">Editar</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="mb-4">
+  <h2>Listado de usuarios</h2>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <div *ngFor="let usuario of usuarios">
+      <div class="card mb-2" (click)="buscarTareas(usuario.id)">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ usuario.nombre }} {{ usuario.apellido }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <app-tarea></app-tarea>
+  </div>
+</div>
